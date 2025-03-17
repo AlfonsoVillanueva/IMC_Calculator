@@ -3,11 +3,14 @@ package com.villanueva.alfonso
 import android.widget.Toast
 import android.content.Context
 import android.content.Intent
+import android.icu.text.DecimalFormat
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import coil3.load
 import com.villanueva.alfonso.databinding.ActivityMainBinding
+import kotlinx.coroutines.delay
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,9 +39,11 @@ class MainActivity : AppCompatActivity() {
             if (pesoTexto.isEmpty() || alturaTexto.isEmpty()) {
                 camposVacios(this)
                 //Cambio de imagen
-                binding.ivGif.load("https://media1.tenor.com/m/dQ37CGSZ73QAAAAd/gawr-gura-holo-live.gif")
                 x ++
-                if (x>=10){
+                if(x == 1){
+                    binding.ivGif.load("https://media1.tenor.com/m/ij__sPU0KmgAAAAd/mumei-nanashi-mumei.gif")
+                }
+                if (x==10){
                     binding.ivGif.load("https://media1.tenor.com/m/wVe74xP_iukAAAAd/iroha-%E9%A2%A8%E7%9C%9F%E3%81%84%E3%82%8D%E3%81%AF.gif")
                 }
 
@@ -55,11 +60,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calcularIMC(){
-        imc = peso / (altura * altura)
+        imc = String.format("%.2f", peso / (altura * altura)).toDouble()
+        //imc = peso / (altura * altura)
     }
 
     fun camposVacios(context: Context) {
-        Toast.makeText(context, "Debes llenar todos los campos", Toast.LENGTH_SHORT).show()
+        val toast = Toast.makeText(this, "Debes llenar todos los campos", Toast.LENGTH_SHORT)
+        toast.setGravity(Gravity.CENTER, 0, 300)  // Centrado horizontal y verticalmente
+
+        toast.show()
+
     }
 
 }

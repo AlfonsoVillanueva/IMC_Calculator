@@ -23,7 +23,7 @@
         android:id="@+id/tv_imc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/text"
         android:textSize="16sp"
@@ -36,7 +36,7 @@
         android:layout_width="227dp"
         android:layout_height="53dp"
         android:layout_marginStart="89dp"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="95dp"
         android:fontFamily="monospace"
         android:scrollHorizontally="false"
@@ -45,6 +45,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,TextSizeCheck" />
@@ -53,9 +54,10 @@
         android:id="@+id/iv_gif2"
         android:layout_width="255dp"
         android:layout_height="255dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="44dp"
         android:contentDescription="Si"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_imc"
         tools:ignore="HardcodedText,ImageContrastCheck"
@@ -72,9 +74,9 @@
         android:text="@string/regresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_imcText"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.838" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
