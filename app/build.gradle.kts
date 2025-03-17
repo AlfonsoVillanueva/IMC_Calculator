@@ -7,6 +7,10 @@ android {
     namespace = "com.villanueva.alfonso"
     compileSdk = 35
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.villanueva.alfonso"
         minSdk = 29
@@ -49,4 +53,5 @@ dependencies {
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.1.0")
     implementation("io.coil-kt.coil3:coil-gif:3.1.0")
     implementation ("com.airbnb.android:lottie:6.6.3")
+
 }
