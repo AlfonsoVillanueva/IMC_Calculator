@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.ivGif.load("https://media1.tenor.com/m/bOF1MhmFG7oAAAAC/gawr-gura-roomba.gif")
 
-
-
         binding.btnCalcular.setOnClickListener {
             val pesoTexto = binding.etPeso.text.toString()
             val alturaTexto = binding.etAltura.text.toString()

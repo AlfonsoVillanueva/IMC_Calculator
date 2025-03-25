@@ -19,8 +19,6 @@ class resultActivity : AppCompatActivity() {
         binding.tvImc.text = "Su indice de masa corporal es de: $imc kg/m²"
 
 
-
-
         if(imc!! < 18.5){
             //Peso bajo
             binding.tvImcText.text = "Peso bajo"
