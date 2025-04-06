@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.villanueva.alfonso.adapter.miAdapter
+import com.villanueva.alfonso.adapter.MiAdaptador
 import com.villanueva.alfonso.data.Gato
 
 class RecyclerViewTest : AppCompatActivity() {
@@ -18,10 +18,14 @@ class RecyclerViewTest : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_recycler_view_test)
 
-        val gato1= Gato("URL","Hola")
-        //Crear varios y hacer arreglo
+        val gato1= Gato("https://i.pinimg.com/736x/2e/2d/b3/2e2db3394efa67302e2da1deb676839b.jpg","Siiinnn")
+        val gato2= Gato("https://i.pinimg.com/736x/2e/2d/b3/2e2db3394efa67302e2da1deb676839b.jpg","Armis #D lets go")
+        val gato3= Gato("https://i.pinimg.com/736x/2e/2d/b3/2e2db3394efa67302e2da1deb676839b.jpg","Shiorin")
+        val gato4= Gato("https://i.pinimg.com/736x/2e/2d/b3/2e2db3394efa67302e2da1deb676839b.jpg","Hola")
 
-        //val miAdaptador = miAdapter(//nombre arreglo)
+        val prueba = arrayOf(gato1,gato2,gato3,gato4)
+
+        val miAdaptador =MiAdaptador(prueba)
 
         val miRecycler: RecyclerView = findViewById(R.id.rvMain)
 
@@ -31,10 +35,5 @@ class RecyclerViewTest : AppCompatActivity() {
         //miRecycler.adapter = miAdapter
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
     }
 }
