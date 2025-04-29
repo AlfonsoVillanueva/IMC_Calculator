@@ -10,6 +10,8 @@ import coil3.load
 import com.villanueva.alfonso.R
 import com.villanueva.alfonso.data.Gato
 
+//Ca,biar arryt por la mutable list cuando jale
+//Checar video del cordi
 class MiAdaptador (private val dataSet:Array<Gato>): RecyclerView.Adapter<MiAdaptador.ViewHolder>(){
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
 

@@ -1,3 +1,6 @@
 package com.villanueva.alfonso.data
 
-data class Gato(val imagen:String,val mensage:String)
+import com.google.gson.annotations.SerializedName
+
+data class Gato(@SerializedName("id") val imagen:String,
+                @SerializedName("createdAt") val mensage:String)
